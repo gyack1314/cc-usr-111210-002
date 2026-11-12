@@ -1,0 +1,21 @@
+{
+  "source": {
+    "path": "orders-null.avro",
+    "bytes": 513,
+    "sha256": "c4845a98cfd51ec39099ca8a3dab874508ab6dd32d1b8da8ae9fcbb385ded47f"
+  },
+  "record_ranges": [
+    [
+      0,
+      2
+    ]
+  ],
+  "paths": [
+    "order",
+    "items[].sku",
+    "attrs{*}"
+  ],
+  "max_block_bytes": 1048576,
+  "max_uncompressed_bytes": 2097152,
+  "max_depth": 32
+}

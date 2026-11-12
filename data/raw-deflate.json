@@ -1,0 +1,21 @@
+{
+  "source": {
+    "path": "orders-deflate.avro",
+    "bytes": 517,
+    "sha256": "3a75a21b34b59ff5ce1b748b6bd670b812d81cf0e1d0dc60f68efa58f0be0dd9"
+  },
+  "record_ranges": [
+    [
+      0,
+      2
+    ]
+  ],
+  "paths": [
+    "order",
+    "items[].sku",
+    "attrs{*}"
+  ],
+  "max_block_bytes": 1048576,
+  "max_uncompressed_bytes": 2097152,
+  "max_depth": 32
+}

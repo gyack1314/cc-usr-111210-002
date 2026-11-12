@@ -1,0 +1,7 @@
+# 对象容器读取口径
+
+记录区间为零基半开区间，全文件记录序号在块之间连续。投影语法a.b用于record、[]遍历array、{*}遍历map；对union在选中值上继续路径并保留writer分支索引，null返回明确null。枚举值保留符号和索引，fixed按schema字节数，浮点为小端IEEE，bytes不转文本。record和enum/fixed具名解析遵循namespace与fullname，允许递归schema但按深度预算终止。schema字段default不用于补writer缺失字节。
+
+long为64位，int为32位；长度、计数和union索引都检查非负及配置界，容器零计数终止，负计数的字节大小只覆盖该块条目。metadata的key为string、value为bytes。codec支持null与deflate，不支持的codec报告不支持。每个物理数据块后有头部同一16字节sync，不能在payload中搜索它。
+
+跨块书签由原文件身份、完整块号和输出提交位置组成。原范围指解压前块范围与块内记录号，不虚构解压值有文件连续字节范围。未解码块只标结构核对。

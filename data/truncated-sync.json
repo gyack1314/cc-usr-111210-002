@@ -1,0 +1,21 @@
+{
+  "source": {
+    "path": "truncated.avro",
+    "bytes": 506,
+    "sha256": "39c1bae29c896180651da4490ac647e3ef7000344ec64b6e39e8dffa9ff698d8"
+  },
+  "record_ranges": [
+    [
+      0,
+      2
+    ]
+  ],
+  "paths": [
+    "order",
+    "items[].sku",
+    "attrs{*}"
+  ],
+  "max_block_bytes": 1048576,
+  "max_uncompressed_bytes": 2097152,
+  "max_depth": 32
+}
